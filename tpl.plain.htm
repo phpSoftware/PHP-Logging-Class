@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Extended Log &mdash; Plain Style</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+:focus {outline:0}
+* {background:white;margin:12px;font-family:"Lucida Console",Monaco,"Courier New",Courier,monospace}
+td,th{border:1px solid black}
+td{padding:7px}
+/* STATUS-COLOR-TAGS */
+tag            {padding:3px 7px;border-radius:7px}
+tag[debug]     {color:black;background:#DFF2BF}
+tag[info]      {color:black;background:#BDE5F8}
+tag[notice]    {color:black;background:#FEEFB3}
+tag[warning]   {color:black;background:#FFCCBA}
+tag[error]     {color:black;background:#FFBABA}
+tag[critical]  {color:white;background:#D8000C}
+tag[alert]     {color:white;background:blueviolet}
+tag[emergency] {color:white;background:deeppink}
+tag[gau]       {color:white;background:black}
+/* TABLE-SORT */
+.tablesorter-header { /* COLUMNE HEADER */
+ background-repeat:no-repeat;background-position:center right;cursor:pointer
+}
+.tablesorter-headerUnSorted { /* UNSORTED IMAGE */
+ background-image:url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw)
+}
+.tablesorter-headerAsc { /* UP IMAGE */
+ background-image:url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7)
+}
+.tablesorter-headerDesc { /* DOWN IMAGE */
+ background-image:url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7)
+}
+.sorter-false { background-image:none !important }
+/* RESPONSIVE TABLE */
+@media screen and (max-width:600px){thead{display:none}
+ tr{display:block;border-bottom:2px solid #ddd}
+ td{display:block;text-align:right;font-size:.9em}
+ td:before{content:attr(data-label);float:left;font-weight:bold}
+}
+</style>
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAnYBjAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREREREQAAERERERERAAAAAAAAAAAAAAAAAAAAAAAAERERERERAAAREREREREAAAAAAAAAAAAAAAAAAAAAAAAREREREREAABEREREREQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADAAwAAwAMAAP//AAD//wAAwAMAAMADAAD//wAA//8AAMADAADAAwAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
+<script>
+ $(document).ready(function(){ $("table").tablesorter({dateFormat:"yyyymmdd"}); });
+</script>
+</head>
+<body>
+<section>
+<h2>Extended Log</h2>
+<table xx>
+ <thead>
+  <tr>
+   <th>Date/Time</th>
+   <th>Programm</th>
+   <th>Message</th>
+   <th>Status</th>
+  </tr>
+ </thead>
+ <tbody>
+<!-- </tbody></table></section></body></html> -->
