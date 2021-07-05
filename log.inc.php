@@ -1,6 +1,7 @@
 <?php
 /* ⣠⣾⣿ Simple PHP log class PHP 4.3 and > ⣿⣷⣄ */
 class log {
+    var $fh;
     protected $options = array(
         // e.g. '/path/to/logfile' OR use '.' = logfile life in same directory
         'path'           => '.',
